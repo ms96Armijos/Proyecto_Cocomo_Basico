@@ -45,18 +45,18 @@ public class leerLDC {
         return cont;
     }
 
-    
-     /**
-     * Este método permite buscar archivos de algún proyecto completo 
-     * de software desarrollado y evaluar sus líneas de código
-     * @param RutaDelProyecto este parámetro sirve para saber la ruta del proyecto
+    /**
+     * Este método permite buscar archivos de algún proyecto completo de
+     * software desarrollado y evaluar sus líneas de código
+     *
+     * @param RutaDelProyecto este parámetro sirve para saber la ruta del
+     * proyecto
      * @return retorna el total de líneas contadas en los archivos del proyecto
      * @throws FileNotFoundException Esta excepción aparece cuando se intenta
      * abrir un fichero y no se encuentra en la ruta especificada.
      * @throws IOException cuando se produce un error de entrada y salida del
      * programa es necesario tratarla
      */
-    
     public int leerProyectoCompleto(File RutaDelProyecto) throws FileNotFoundException, IOException {
         ArrayList<String> FiltroParaArchivos = new ArrayList<String>();
 
