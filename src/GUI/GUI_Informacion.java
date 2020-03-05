@@ -3,7 +3,7 @@ package GUI;
 
 /**
  *
- * @author Tivi
+ * @author Steeven Armijos, Jhulissa Villamagua
  */
 public class GUI_Informacion extends javax.swing.JFrame {
 

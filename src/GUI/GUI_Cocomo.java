@@ -14,7 +14,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
- * @author Tivi
+ * @author Steeven Armijos, Jhulissa Villamagua
  */
 public class GUI_Cocomo extends javax.swing.JFrame {
 

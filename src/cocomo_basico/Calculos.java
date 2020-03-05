@@ -12,7 +12,6 @@ public class Calculos {
     /**
      * Este método permite calcular (estimar) el esfuerzo total necesario para
      * desarrollar el producto de software, expresada en meses por persona
-     *
      * @param constante_a es una constante definida en el modelo COCOMO Básico
      * @param KLOC es el tamaño estimado del producto de software indican en
      * Kilo líneas de código (obteniéndolo desde los archivos fuente del

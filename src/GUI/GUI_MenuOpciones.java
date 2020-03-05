@@ -3,7 +3,7 @@ package GUI;
 
 /**
  *
- * @author Tivi
+ * @author Steeven Armijos, Jhulissa Villamagua
  */
 public class GUI_MenuOpciones extends javax.swing.JFrame {
 
@@ -29,7 +29,7 @@ public class GUI_MenuOpciones extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(31, 118, 144));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("COCOMO 81");
+        jButton1.setText("COCOMO BÁSICO");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
