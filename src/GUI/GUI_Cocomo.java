@@ -1,9 +1,9 @@
+
 package GUI;
 
 import cocomo_basico.Calculos;
 import cocomo_basico.Comprobaciones;
 import cocomo_basico.leerLDC;
-import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -14,9 +14,9 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
- * @author Steeven Armijos, Jhulissa Villamagua
+ * @author Tivi
  */
-public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
+public class GUI_Cocomo extends javax.swing.JFrame {
 
     Calculos calculando = new Calculos();
     Comprobaciones comprobaciones = new Comprobaciones();
@@ -46,9 +46,10 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
     double resultadoProductividad;
     double resultadoCostoTotalDelProyecto;
 
-    public Jinternal_Cocomo81() {
+    
+    public GUI_Cocomo() {
         initComponents();
-        this.setLocation(300, 20);
+        this.setLocation(350, 60);
 
         flecha_Organico.setEnabled(false);
         flecha_Semiacoplado.setEnabled(false);
@@ -67,7 +68,6 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
         jPanel10 = new javax.swing.JPanel();
         btnNuevaEstimación = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         rdbOrganico = new javax.swing.JRadioButton();
@@ -100,9 +100,11 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
         jPanel7 = new javax.swing.JPanel();
         btnCalcularCOCOMO = new javax.swing.JButton();
 
-        setClosable(true);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        lblNombre_Proyecto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        lblNombre_Proyecto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblNombre_Proyecto.setForeground(new java.awt.Color(0, 0, 204));
         lblNombre_Proyecto.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblNombre_Proyecto.setText("COCOMO 81 O COCOMO BÁSICO");
@@ -121,16 +123,18 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnNuevaEstimación, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnNuevaEstimación, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addComponent(btnNuevaEstimación)
-                .addGap(0, 3, Short.MAX_VALUE))
+                .addComponent(btnNuevaEstimación, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setText("Proyecto a estimar:");
 
@@ -139,30 +143,25 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(lblNombre_Proyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1)))
+                    .addComponent(lblNombre_Proyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lblNombre_Proyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 23, Short.MAX_VALUE))
+                    .addComponent(jPanel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
-
-        jPanel2.setBackground(new java.awt.Color(255, 102, 51));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Seleccione el tipo de proyecto:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11), new java.awt.Color(255, 0, 0))); // NOI18N
 
@@ -275,14 +274,14 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(cbo_KLOC, 0, 174, Short.MAX_VALUE)
+            .addComponent(cbo_KLOC, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txt_NumeroLineas)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel7)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 31, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
@@ -378,7 +377,7 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
                         .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 34, Short.MAX_VALUE)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblProductividad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
                     .addComponent(lblTrabajadores, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -454,7 +453,7 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(btnCalcularCOCOMO, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -476,7 +475,7 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -489,113 +488,57 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cbo_KLOCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_KLOCActionPerformed
-
-        buscador = new JFileChooser();//INICIALIZAR EL JFileChooser
-        /**
-         * SE CAPTURA EL ITEM SELECCIONADO EN EL COMBOBOX
-         */
-        String seleccionado = cbo_KLOC.getSelectedItem().toString();
+    private void btnNuevaEstimaciónActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevaEstimaciónActionPerformed
 
         /**
-         * MEDIANTE UN SWITCH REALIZAMOS QUE SE BUSQUE YA SEA UN ARCHIVO O UNA
-         * CARPETA QUE CONTIENE LOS ARQUIVOS Y CONTAR LAS LÍNEAS DE CÓDIGO
-         */
-        switch (seleccionado) {
-
-            /**
-             * EN EL PRIMER CASO SE PROCEDERÁ A BUSCAR POR ARCHIVOS
-             */
-            case "Archivo":
-
-                //JOptionPane.showMessageDialog(null, "Archivo: " + seleccionado);
-                buscador.setFileFilter(filtradoDeArchivos);
-
-                if (buscador.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-                    try {
-                        String UbicacionArchivo = buscador.getSelectedFile().getAbsolutePath();
-
-                        leerLDC TipoDeLecturaDeArchivos = new leerLDC();
-
-                        int LineasContadas = TipoDeLecturaDeArchivos.leerPorArchivos(UbicacionArchivo);
-
-                        line += LineasContadas;
-                        txt_NumeroLineas.setText("" + (line));
-
-                        comprobaciones.TipoDeProyecto(line, flecha_Organico, flecha_Semiacoplado, flecha_Empotrado);
-                    } catch (FileNotFoundException ex) {
-
-                    } catch (IOException ex) {
-
-                    }
-                } else {
-                    System.out.println("Se canceló la búsqueda");
-                }
-                break;
-            /**
-             * EN EL SEGUNDO CASO SE PROCEDERÁ A BUSCAR POR CARPETAS
-             */
-            case "Carpeta":
-                //JOptionPane.showMessageDialog(null, "Carpeta: " + seleccionado);
-                buscador.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-                buscador.setFileFilter(filtradoDeArchivos);
-                if (buscador.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-                    leerLDC TipoDeLecturaDeArchivos = new leerLDC();
-                    try {
-                        File folderFile = new File(buscador.getSelectedFile().toString());
-                        int LineasContadas = TipoDeLecturaDeArchivos.leerProyectoCompleto(folderFile);
-                        line += LineasContadas;
-                        txt_NumeroLineas.setText("" + (line));
-
-                        comprobaciones.TipoDeProyecto(line, flecha_Organico, flecha_Semiacoplado, flecha_Empotrado);
-                    } catch (IOException ex) {
-
-                    }
-                } else {
-                    System.out.println("Se canceló la búsqueda");
-                }
-                break;
-        }
-    }//GEN-LAST:event_cbo_KLOCActionPerformed
+        * Deshabilitando los botones para nueva estimación
+        */
+        btnCalcularCOCOMO.setEnabled(false);
+        flecha_Organico.setEnabled(false);
+        flecha_Semiacoplado.setEnabled(false);
+        flecha_Empotrado.setEnabled(false);
+        cboCostoProyecto.setEnabled(false);
+        /**
+        * Limpiando las etiquetas y campos de texto
+        */
+        txt_NumeroLineas.setText("0");
+        lblProductividadText.setText("");
+        lblEsfuerzo.setText("");
+        lblTiempoDesarrollo.setText("");
+        lblTrabajadores.setText("");
+        lblProductividad.setText("");
+        lblpersonal.setText("");
+        lblesTdesarrollo.setText("");
+        lblesfuer.setText("");
+        lblcostoTotal.setText("");
+        lblCostoTotalProyecto.setText("");
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+    }//GEN-LAST:event_btnNuevaEstimaciónActionPerformed
 
     private void rdbOrganicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbOrganicoActionPerformed
         // TODO add your handling code here:
@@ -645,6 +588,158 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_rdbempotradoActionPerformed
 
+    private void cbo_KLOCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_KLOCActionPerformed
+
+        buscador = new JFileChooser();//INICIALIZAR EL JFileChooser
+        /**
+        * SE CAPTURA EL ITEM SELECCIONADO EN EL COMBOBOX
+        */
+        String seleccionado = cbo_KLOC.getSelectedItem().toString();
+
+        /**
+        * MEDIANTE UN SWITCH REALIZAMOS QUE SE BUSQUE YA SEA UN ARCHIVO O UNA
+        * CARPETA QUE CONTIENE LOS ARQUIVOS Y CONTAR LAS LÍNEAS DE CÓDIGO
+        */
+        switch (seleccionado) {
+
+            /**
+            * EN EL PRIMER CASO SE PROCEDERÁ A BUSCAR POR ARCHIVOS
+            */
+            case "Archivo":
+
+            //JOptionPane.showMessageDialog(null, "Archivo: " + seleccionado);
+            buscador.setFileFilter(filtradoDeArchivos);
+
+            if (buscador.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+                try {
+                    String UbicacionArchivo = buscador.getSelectedFile().getAbsolutePath();
+
+                    leerLDC TipoDeLecturaDeArchivos = new leerLDC();
+
+                    int LineasContadas = TipoDeLecturaDeArchivos.leerPorArchivos(UbicacionArchivo);
+
+                    line += LineasContadas;
+                    txt_NumeroLineas.setText("" + (line));
+
+                    comprobaciones.TipoDeProyecto(line, flecha_Organico, flecha_Semiacoplado, flecha_Empotrado);
+                } catch (FileNotFoundException ex) {
+
+                } catch (IOException ex) {
+
+                }
+            } else {
+                System.out.println("Se canceló la búsqueda");
+            }
+            break;
+            /**
+            * EN EL SEGUNDO CASO SE PROCEDERÁ A BUSCAR POR CARPETAS
+            */
+            case "Carpeta":
+            //JOptionPane.showMessageDialog(null, "Carpeta: " + seleccionado);
+            buscador.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            if (buscador.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+                leerLDC TipoDeLecturaDeArchivos = new leerLDC();
+                try {
+                    File folderFile = new File(buscador.getSelectedFile().toString());
+                    int LineasContadas = TipoDeLecturaDeArchivos.leerProyectoCompleto(folderFile);
+                    line += LineasContadas;
+                    txt_NumeroLineas.setText("" + (line));
+
+                    comprobaciones.TipoDeProyecto(line, flecha_Organico, flecha_Semiacoplado, flecha_Empotrado);
+                } catch (IOException ex) {
+
+                }
+            } else {
+                System.out.println("Se canceló la búsqueda");
+            }
+            break;
+        }
+    }//GEN-LAST:event_cbo_KLOCActionPerformed
+
+    private void txt_NumeroLineasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_NumeroLineasActionPerformed
+
+    }//GEN-LAST:event_txt_NumeroLineasActionPerformed
+
+    private void txt_NumeroLineasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_NumeroLineasKeyPressed
+
+    }//GEN-LAST:event_txt_NumeroLineasKeyPressed
+
+    private void txt_NumeroLineasKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_NumeroLineasKeyReleased
+
+    }//GEN-LAST:event_txt_NumeroLineasKeyReleased
+
+    private void txt_NumeroLineasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_NumeroLineasKeyTyped
+
+        char caracter = evt.getKeyChar();
+
+        // Verificar si la tecla pulsada no es un digito
+        if (((caracter < '0')
+            || (caracter > '9'))
+        && (caracter != '\b' /*corresponde a BACK_SPACE*/)) {
+        evt.consume();  // ignorar el evento de teclado
+        }
+    }//GEN-LAST:event_txt_NumeroLineasKeyTyped
+
+    private void cboCostoProyectoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cboCostoProyectoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cboCostoProyectoMouseClicked
+
+    private void cboCostoProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboCostoProyectoActionPerformed
+
+        DecimalFormat redondearSalario = new DecimalFormat("#.00");
+        String seleccionado = cboCostoProyecto.getSelectedItem().toString();
+
+        switch (seleccionado) {
+            case "Salario":
+            /**
+            * CALCULANDO EL COSTO TOTAL DEL PROYECTO
+            */
+            resultadoCostoTotalDelProyecto = 0;
+
+            double SalarioCapturado = comprobaciones.ValidadPeticionSueldo();
+
+            //Se obtiene el costo total del proyecto por SALARIO sin sumar los imprevistos
+            double ResultadoSalarioCalculado = calculando.CostoTotalProyectoPorSalario(
+                Double.parseDouble(lblTrabajadores.getText().toString().replace(",", ".")),
+                SalarioCapturado, Double.parseDouble(lblTiempoDesarrollo.getText().toString().replace(",", ".")));
+            //calculamos el costo de imprevistos y lo guardamos en la variable
+            //para poder sumarla al costo total
+            double CalcularImprevistosSalario = calculando.CalculoDeImprevistos(ResultadoSalarioCalculado);
+
+            //se suma ambos costos para imprimir en pantalla
+            resultadoCostoTotalDelProyecto = ResultadoSalarioCalculado + CalcularImprevistosSalario;
+
+            System.out.println("Sin AUM resultadoCostoTotalDelProyectoSalario: " + ResultadoSalarioCalculado);
+            System.out.println("resultadoCostoTotalDelProyectoSalario: " + resultadoCostoTotalDelProyecto);
+            lblcostoTotal.setText(redondearSalario.format(resultadoCostoTotalDelProyecto));
+            lblCostoTotalProyecto.setText(" Dólares");
+            break;
+            case "LDC":
+            resultadoCostoTotalDelProyecto = 0;
+            /**
+            * CALCULANDO EL COSTO TOTAL DEL PROYECTO
+            */
+            //Se obtiene el costo total del proyecto por LDC sin sumar los imprevistos
+            double ResultadoLDCCalculado = calculando.CostoProyectoPorLDC(Double.parseDouble(txt_NumeroLineas.getText().toString()), Double.parseDouble(lblProductividad.getText().toString().replace(",", ".")));
+            //calculamos el costo de imprevistos y lo guardamos en la variable
+            //para poder sumarla al costo total
+            double CalcularImprevistosLDC = calculando.CalculoDeImprevistos(ResultadoLDCCalculado);
+
+            //se suma ambos costos para imprimir en pantalla
+            resultadoCostoTotalDelProyecto = ResultadoLDCCalculado + CalcularImprevistosLDC;
+            //                System.out.println("sin AUM resultadoCostoTotalDelProyectoLDC: " + ResultadoLDCCalculado);
+            //                System.out.println("resultadoCostoTotalDelProyectoSalario: " + resultadoCostoTotalDelProyecto);
+
+            lblcostoTotal.setText(redondearSalario.format(resultadoCostoTotalDelProyecto));
+            lblCostoTotalProyecto.setText(" Dólares");
+            break;
+        }
+    }//GEN-LAST:event_cboCostoProyectoActionPerformed
+
+    private void cboCostoProyectoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cboCostoProyectoKeyTyped
+
+    }//GEN-LAST:event_cboCostoProyectoKeyTyped
+
     private void btnCalcularCOCOMOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularCOCOMOActionPerformed
 
         if (Double.parseDouble(txt_NumeroLineas.getText().toString()) >= 1000) {
@@ -653,8 +748,8 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
             DecimalFormat redondearTrabajadores = new DecimalFormat("#");
 
             /**
-             * CALCULANDO EL ESFUERZO
-             */
+            * CALCULANDO EL ESFUERZO
+            */
             resultadoEsfuerzo = calculando.Esfuerzo(constante_a, Double.parseDouble(txt_NumeroLineas.getText().toString()), constante_b);
 
             System.out.println("resultadoEsfuerzo: " + resultadoEsfuerzo);
@@ -662,24 +757,24 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
             lblesfuer.setText("Esfuerzo nominal en persona-mes");
 
             /**
-             * CALCULANDO EL TIEMPO DE DESARROLLO
-             */
+            * CALCULANDO EL TIEMPO DE DESARROLLO
+            */
             resultadoTiempoDesarrollo = calculando.TiempoDeDesarrollo(constante_c, resultadoEsfuerzo, constante_d);
             System.out.println("resultadoTiempoDesarrollo: " + resultadoTiempoDesarrollo);
             lblTiempoDesarrollo.setText(redondearTiempoDesarrollo.format(resultadoTiempoDesarrollo));
             lblesTdesarrollo.setText("Meses");
 
             /**
-             * CALCULANDO EL NÚMERO DE TRABAJADORES
-             */
+            * CALCULANDO EL NÚMERO DE TRABAJADORES
+            */
             resultadoTrabajadores = calculando.Personal(resultadoEsfuerzo, resultadoTiempoDesarrollo);
             System.out.println("resultadoTrabajadores: " + resultadoTrabajadores);
             lblTrabajadores.setText(redondearTrabajadores.format(resultadoTrabajadores));
             lblpersonal.setText("Personas en el proyecto");
 
             /**
-             * CALCULANDO LA PRODUCTIVIDAD
-             */
+            * CALCULANDO LA PRODUCTIVIDAD
+            */
             resultadoProductividad = calculando.Personal(Double.parseDouble(txt_NumeroLineas.getText().toString()), resultadoEsfuerzo);
             System.out.println("resultadoProductividad: " + resultadoProductividad);
             lblProductividad.setText(redondearTrabajadores.format(resultadoProductividad));
@@ -690,122 +785,42 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Se requiere más líneas de código");
         }
 
-
     }//GEN-LAST:event_btnCalcularCOCOMOActionPerformed
 
-    private void btnNuevaEstimaciónActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevaEstimaciónActionPerformed
-
-        /**
-         * Deshabilitando los botones para nueva estimación
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        btnCalcularCOCOMO.setEnabled(false);
-        flecha_Organico.setEnabled(false);
-        flecha_Semiacoplado.setEnabled(false);
-        flecha_Empotrado.setEnabled(false);
-        cboCostoProyecto.setEnabled(false);
-        /**
-         * Limpiando las etiquetas y campos de texto
-         */
-        txt_NumeroLineas.setText("0");
-        lblProductividadText.setText("");
-        lblEsfuerzo.setText("");
-        lblTiempoDesarrollo.setText("");
-        lblTrabajadores.setText("");
-        lblProductividad.setText("");
-        lblpersonal.setText("");
-        lblesTdesarrollo.setText("");
-        lblesfuer.setText("");
-        lblcostoTotal.setText("");
-        lblCostoTotalProyecto.setText("");
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-    }//GEN-LAST:event_btnNuevaEstimaciónActionPerformed
-
-    private void cboCostoProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboCostoProyectoActionPerformed
-
-        DecimalFormat redondearSalario = new DecimalFormat("#.00");
-        String seleccionado = cboCostoProyecto.getSelectedItem().toString();
-
-        switch (seleccionado) {
-            case "Salario":
-                /**
-                 * CALCULANDO EL COSTO TOTAL DEL PROYECTO
-                 */
-                resultadoCostoTotalDelProyecto = 0;
-
-                double SalarioCapturado = comprobaciones.ValidadPeticionSueldo();
-
-                //Se obtiene el costo total del proyecto por SALARIO sin sumar los imprevistos 
-                double ResultadoSalarioCalculado = calculando.CostoTotalProyectoPorSalario(
-                        Double.parseDouble(lblTrabajadores.getText().toString().replace(",", ".")),
-                        SalarioCapturado, Double.parseDouble(lblTiempoDesarrollo.getText().toString().replace(",", ".")));
-                //calculamos el costo de imprevistos y lo guardamos en la variable 
-                //para poder sumarla al costo total
-                double CalcularImprevistosSalario = calculando.CalculoDeImprevistos(ResultadoSalarioCalculado);
-
-                //se suma ambos costos para imprimir en pantalla 
-                resultadoCostoTotalDelProyecto = ResultadoSalarioCalculado + CalcularImprevistosSalario;
-
-                System.out.println("Sin AUM resultadoCostoTotalDelProyectoSalario: " + ResultadoSalarioCalculado);
-                System.out.println("resultadoCostoTotalDelProyectoSalario: " + resultadoCostoTotalDelProyecto);
-                lblcostoTotal.setText(redondearSalario.format(resultadoCostoTotalDelProyecto));
-                lblCostoTotalProyecto.setText(" Dólares");
-                break;
-            case "LDC":
-                resultadoCostoTotalDelProyecto = 0;
-                /**
-                 * CALCULANDO EL COSTO TOTAL DEL PROYECTO
-                 */
-                //Se obtiene el costo total del proyecto por LDC sin sumar los imprevistos
-                double ResultadoLDCCalculado = calculando.CostoProyectoPorLDC(Double.parseDouble(txt_NumeroLineas.getText().toString()), Double.parseDouble(lblProductividad.getText().toString().replace(",", ".")));
-                //calculamos el costo de imprevistos y lo guardamos en la variable 
-                //para poder sumarla al costo total
-                double CalcularImprevistosLDC = calculando.CalculoDeImprevistos(ResultadoLDCCalculado);
-
-                //se suma ambos costos para imprimir en pantalla 
-                resultadoCostoTotalDelProyecto = ResultadoLDCCalculado + CalcularImprevistosLDC;
-//                System.out.println("sin AUM resultadoCostoTotalDelProyectoLDC: " + ResultadoLDCCalculado);
-//                System.out.println("resultadoCostoTotalDelProyectoSalario: " + resultadoCostoTotalDelProyecto);
-
-                lblcostoTotal.setText(redondearSalario.format(resultadoCostoTotalDelProyecto));
-                lblCostoTotalProyecto.setText(" Dólares");
-                break;
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(GUI_Cocomo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(GUI_Cocomo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(GUI_Cocomo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(GUI_Cocomo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
 
-    }//GEN-LAST:event_cboCostoProyectoActionPerformed
-
-    private void cboCostoProyectoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cboCostoProyectoMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cboCostoProyectoMouseClicked
-
-    private void txt_NumeroLineasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_NumeroLineasKeyTyped
-
-        char caracter = evt.getKeyChar();
-
-        // Verificar si la tecla pulsada no es un digito
-        if (((caracter < '0')
-                || (caracter > '9'))
-                && (caracter != '\b' /*corresponde a BACK_SPACE*/)) {
-            evt.consume();  // ignorar el evento de teclado
-        }
-    }//GEN-LAST:event_txt_NumeroLineasKeyTyped
-
-    private void txt_NumeroLineasKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_NumeroLineasKeyReleased
-
-    }//GEN-LAST:event_txt_NumeroLineasKeyReleased
-
-    private void txt_NumeroLineasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_NumeroLineasKeyPressed
-
-    }//GEN-LAST:event_txt_NumeroLineasKeyPressed
-
-    private void txt_NumeroLineasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_NumeroLineasActionPerformed
-
-    }//GEN-LAST:event_txt_NumeroLineasActionPerformed
-
-    private void cboCostoProyectoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cboCostoProyectoKeyTyped
-
-
-    }//GEN-LAST:event_cboCostoProyectoKeyTyped
-
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GUI_Cocomo().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcularCOCOMO;
@@ -825,7 +840,6 @@ public class Jinternal_Cocomo81 extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
