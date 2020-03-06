@@ -538,6 +538,8 @@ public class GUI_Cocomo extends javax.swing.JFrame {
         lblcostoTotal.setText("");
         lblCostoTotalProyecto.setText("");
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        cont=0;
+        line=0;
     }//GEN-LAST:event_btnNuevaEstimaciónActionPerformed
 
     private void rdbOrganicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbOrganicoActionPerformed
@@ -784,6 +786,7 @@ public class GUI_Cocomo extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "Se requiere más líneas de código");
         }
+        btnCalcularCOCOMO.setEnabled(false);
 
     }//GEN-LAST:event_btnCalcularCOCOMOActionPerformed
 
