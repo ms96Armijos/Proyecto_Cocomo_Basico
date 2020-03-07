@@ -1,6 +1,8 @@
 
 package GUI;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Steeven Armijos, Jhulissa Villamagua
@@ -10,6 +12,7 @@ public class GUI_Informacion extends javax.swing.JFrame {
     public GUI_Informacion() {
         initComponents();
         this.setLocation(420, 40);
+        setIconImage(new ImageIcon(getClass().getResource("../img/u.png")).getImage());
     }
 
     @SuppressWarnings("unchecked")

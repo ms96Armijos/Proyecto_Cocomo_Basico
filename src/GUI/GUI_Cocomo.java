@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DecimalFormat;
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -50,6 +51,7 @@ public class GUI_Cocomo extends javax.swing.JFrame {
     public GUI_Cocomo() {
         initComponents();
         this.setLocation(350, 60);
+        setIconImage(new ImageIcon(getClass().getResource("../img/u.png")).getImage());
 
         flecha_Organico.setEnabled(false);
         flecha_Semiacoplado.setEnabled(false);

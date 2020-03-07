@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -21,6 +22,7 @@ public class GUI_PantallaInicial extends javax.swing.JFrame {
     public GUI_PantallaInicial() {
         initComponents();
         this.setLocationRelativeTo(null);
+        setIconImage(new ImageIcon(getClass().getResource("../img/u.png")).getImage());
 
     }
 
