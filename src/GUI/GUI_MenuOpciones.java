@@ -13,7 +13,6 @@ public class GUI_MenuOpciones extends javax.swing.JFrame {
         initComponents();
         this.setLocation(420, 200);
         lblContenedorName.setVisible(false);
-        setIconImage(new ImageIcon(getClass().getResource("../img/u.png")).getImage());
     }
 
     @SuppressWarnings("unchecked")

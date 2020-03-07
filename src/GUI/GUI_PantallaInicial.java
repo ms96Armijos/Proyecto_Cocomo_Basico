@@ -22,7 +22,7 @@ public class GUI_PantallaInicial extends javax.swing.JFrame {
     public GUI_PantallaInicial() {
         initComponents();
         this.setLocationRelativeTo(null);
-        setIconImage(new ImageIcon(getClass().getResource("../img/u.png")).getImage());
+        
 
     }
 

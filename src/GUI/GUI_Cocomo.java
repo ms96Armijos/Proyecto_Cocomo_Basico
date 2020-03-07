@@ -51,7 +51,6 @@ public class GUI_Cocomo extends javax.swing.JFrame {
     public GUI_Cocomo() {
         initComponents();
         this.setLocation(350, 60);
-        setIconImage(new ImageIcon(getClass().getResource("../img/u.png")).getImage());
 
         flecha_Organico.setEnabled(false);
         flecha_Semiacoplado.setEnabled(false);
