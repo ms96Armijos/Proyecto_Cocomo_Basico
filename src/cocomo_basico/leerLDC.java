@@ -32,7 +32,9 @@ public class leerLDC {
     public int leerPorArchivos(String direccionArchivo) throws FileNotFoundException, IOException {
 
         String cadena;
+        //leer caracteres de un archivo
         FileReader f = new FileReader(direccionArchivo);
+        //leer una línea completa
         BufferedReader b = new BufferedReader(f);
 
         while ((cadena = b.readLine()) != null) {
@@ -80,6 +82,7 @@ public class leerLDC {
                 leerProyectoCompleto(Archivo);
             } else {
 
+                //Se procede a iterar sobre la colección de elementos de la lista de filtros
                 Iterator<String> FiltrosParaArchivos = FiltroParaArchivos.iterator();
                 while (FiltrosParaArchivos.hasNext()) {
                     if (Archivo.getCanonicalPath().toString().endsWith(FiltrosParaArchivos.next())) {

@@ -102,6 +102,7 @@ public class GUI_Cocomo extends javax.swing.JFrame {
         btnCalcularCOCOMO = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -563,7 +564,6 @@ public class GUI_Cocomo extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (Double.parseDouble(txt_NumeroLineas.getText().toString()) >= 1000) {
             if (rdbsemiacoplado.isSelected() == true) {
-                //JOptionPane.showMessageDialog(null, "Carpeta: " + rdbsemiacoplado.getText().toString());
                 btnCalcularCOCOMO.setEnabled(true);
                 constante_a = 3.0;
                 constante_b = 1.12;
@@ -599,18 +599,10 @@ public class GUI_Cocomo extends javax.swing.JFrame {
         */
         String seleccionado = cbo_KLOC.getSelectedItem().toString();
 
-        /**
-        * MEDIANTE UN SWITCH REALIZAMOS QUE SE BUSQUE YA SEA UN ARCHIVO O UNA
-        * CARPETA QUE CONTIENE LOS ARQUIVOS Y CONTAR LAS LÍNEAS DE CÓDIGO
-        */
         switch (seleccionado) {
 
-            /**
-            * EN EL PRIMER CASO SE PROCEDERÁ A BUSCAR POR ARCHIVOS
-            */
             case "Archivo":
 
-            //JOptionPane.showMessageDialog(null, "Archivo: " + seleccionado);
             buscador.setFileFilter(filtradoDeArchivos);
 
             if (buscador.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
@@ -634,11 +626,7 @@ public class GUI_Cocomo extends javax.swing.JFrame {
                 System.out.println("Se canceló la búsqueda");
             }
             break;
-            /**
-            * EN EL SEGUNDO CASO SE PROCEDERÁ A BUSCAR POR CARPETAS
-            */
             case "Carpeta":
-            //JOptionPane.showMessageDialog(null, "Carpeta: " + seleccionado);
             buscador.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
             if (buscador.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
                 leerLDC TipoDeLecturaDeArchivos = new leerLDC();
@@ -678,7 +666,7 @@ public class GUI_Cocomo extends javax.swing.JFrame {
         // Verificar si la tecla pulsada no es un digito
         if (((caracter < '0')
             || (caracter > '9'))
-        && (caracter != '\b' /*corresponde a BACK_SPACE*/)) {
+        && (caracter != '\b' /*corresponde a la barra espaciadora*/)) {
         evt.consume();  // ignorar el evento de teclado
         }
     }//GEN-LAST:event_txt_NumeroLineasKeyTyped

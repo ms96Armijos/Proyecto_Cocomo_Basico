@@ -23,41 +23,31 @@ public class Comprobaciones {
      * condiciones que se han codificado.
      */
     public int DetectarComentarios(String lineaLeida) {
-        //System.out.println("Linea leida>>>>> "+lineaLeida.replace(" ", ""));
         
         if (lineaLeida.replace(" ", "").startsWith("//")) {
-            //System.out.println("leido //");
             return 0;
         }
         if (lineaLeida.replace(" ", "").startsWith("#")) {
-            //System.out.println("leido #");
             return 0;
         }
         if (lineaLeida.replace(" ", "").contains("/**") || lineaLeida.replace(" ", "").contains("/*")) {
-            //System.out.println("leido /*");
             return 0;
         }
         if (lineaLeida.replace(" ", "").startsWith("*")) {
-            //System.out.println("leido *");
             return 0;
         }
         if (lineaLeida.replace(" ", "").contains("<!--")) {
-            //System.out.println("leido <--!");
             return 0;
         }
         if (lineaLeida.isEmpty()) {
-            //System.out.println("leido vacias");
             return 0;
         }
         if (lineaLeida.replace(" ", "").length()==0) {
-            //System.out.println("leido null");
             return 0;
         }
         if (lineaLeida.replace(" ", "").contains("import") || lineaLeida.replace(" ", "").contains("package")) {
-            //System.out.println("leido package");
             return 0;
         }
-        //System.out.println("linea contada");
         return -1;
         
     }
@@ -66,7 +56,7 @@ public class Comprobaciones {
      * Este método permite activar o desactivar las flechas en el programa
      * dependiendo del número de líneas de código ingresadas para sugerir 
      * utilizar un determinado tipo de proyecto de COCOMO81
-     * @param líneasDeodigo es necesario para comparar si las LDC son 
+     * @param lineasDeCodigo es necesario para comparar si las LDC son 
      * mayores a 1000
      * @param ActivarOrganico es un Jlabel de la imagen de una flecha 
      * que apunta al tipo de proyecto orgánico
@@ -75,22 +65,22 @@ public class Comprobaciones {
      * @param ActivarEmpotrado es un Jlabel de la imagen de una flecha
      * que apunta al tipo de proyecto Empotrado
      */
-    public void TipoDeProyecto(int líneasDeodigo, JLabel ActivarOrganico,
+    public void TipoDeProyecto(int lineasDeCodigo, JLabel ActivarOrganico,
             JLabel ActivarSemiAcoplado, JLabel ActivarEmpotrado) {
 
-        if (líneasDeodigo >= 1000 && líneasDeodigo <= 50000) {
+        if (lineasDeCodigo >= 1000 && lineasDeCodigo <= 50000) {
             ActivarOrganico.setEnabled(true);
             JOptionPane.showMessageDialog(null, "Se recomienda elegir tipo de proyecto Orgánico");
             ActivarSemiAcoplado.setEnabled(false);
             ActivarEmpotrado.setEnabled(false);
         }
-        if (líneasDeodigo > 50000 && líneasDeodigo <= 300000) {
+        if (lineasDeCodigo > 50000 && lineasDeCodigo <= 300000) {
             ActivarSemiAcoplado.setEnabled(true);
             JOptionPane.showMessageDialog(null, "Se recomienda elegir tipo de proyecto SemiAcoplado");
             ActivarOrganico.setEnabled(false);
             ActivarEmpotrado.setEnabled(false);
         }
-        if (líneasDeodigo > 300000) {
+        if (lineasDeCodigo > 300000) {
             ActivarEmpotrado.setEnabled(true);
             JOptionPane.showMessageDialog(null, "Se recomienda elegir tipo de proyecto Empotrado");
             ActivarSemiAcoplado.setEnabled(false);

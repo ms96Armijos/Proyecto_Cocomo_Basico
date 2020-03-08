@@ -117,4 +117,5 @@ public class Calculos {
         double TreintaPorCiento = CostoDelProyecto*0.35;
         return TreintaPorCiento;
     }
+    
 }
